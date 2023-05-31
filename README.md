@@ -14,17 +14,17 @@
   
 O código HTML fornecido é um exemplo de marcação de uma página da web para uma loja chamada "Cabuloso Store". Aqui está um resumo das principais partes do código:
 
-A seção <head> contém metadados, como o título da página, descrição, palavras-chave e informações de autor. Também são incluídos links para arquivos CSS e o ícone do site.
+A seção <code>`<head>`</code> contém metadados, como o título da página, descrição, palavras-chave e informações de autor. Também são incluídos links para arquivos CSS e o ícone do site.
 
-A seção <body> contém o conteúdo visível da página.
+A seção <code>`<body>`</code> contém o conteúdo visível da página.
 
-O cabeçalho (<header>) inclui o menu de navegação da loja. Ele é responsivo e inclui um logotipo, um botão de alternância para a visualização do menu em dispositivos móveis e itens de menu, como "Home", "Categorias", "Blog", "Pedidos" e "Contatos".
+  O cabeçalho <code>`(<header>)`</code> inclui o menu de navegação da loja. Ele é responsivo e inclui um logotipo, um botão de alternância para a visualização do menu em dispositivos móveis e itens de menu, como "Home", "Categorias", "Pedidos" e "Contatos".
 
-A seção de banner (<section class="banner-area">) mostra um carrossel de slides com imagens e informações promocionais sobre os produtos da loja.
+A seção de banner <code>`(<section class="banner-area">)`</code> mostra um carrossel de slides com imagens e informações promocionais sobre os produtos da loja.
 
-A seção de recursos (<section class="features-area">) exibe quatro recursos principais da loja, como "Entrega grátis", "Política de Devolução", "Suporte 24/7" e "Pagamento Seguro". Cada recurso é acompanhado por um ícone e uma breve descrição.
+A seção de recursos <code>`(<section class="features-area">)`</code> exibe quatro recursos principais da loja, como "Entrega grátis", "Política de Devolução", "Suporte 24/7" e "Pagamento Seguro". Cada recurso é acompanhado por um ícone e uma breve descrição.
 
-A seção de categoria (<section class="category-area">) apresenta uma grade de imagens representando diferentes categorias de produtos da loja. Cada imagem é clicável e pode ser ampliada em uma janela pop-up.
+A seção de categoria <code>`(<section class="category-area">)`</code> apresenta uma grade de imagens representando diferentes categorias de produtos da loja. Cada imagem é clicável e pode ser ampliada em uma janela pop-up.
 
 Essa é apenas uma visão geral geral do código HTML fornecido. Cada parte do código tem um papel específico na estruturação e apresentação da página da web para a loja "Loja do Cabuloso".
   
