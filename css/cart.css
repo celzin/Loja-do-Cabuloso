@@ -17,7 +17,6 @@
     --bg-color: #fff;
 }
 
-/*
 img {
     width: 100%;
 }
@@ -25,17 +24,101 @@ img {
 body {
     color: var(--text-color);
 }
-*/
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
 
 #bag-icon {
     font-size: 1.8rem;
     cursor: pointer;
 }
 
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.shop {
+    margin-top: 2rem;
+}
+
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+}
+
+.product-box {
+    position: relative;
+}
+
+.product-box:hover {
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: 0.4s;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: 500;
+}
+
+.add-bag {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.add-bag:hover {
+    background: hsl(249, 32%, 17%);
+}
+
 .bag {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 360px;
     min-height: 100vh;
     padding: 20px;
@@ -126,6 +209,10 @@ body {
     cursor: pointer;
 }
 
+.btn-bag-buy:hover {
+    background: var(--text-color);
+}
+
 #close-bag {
     position: absolute;
     top: 1rem;
@@ -135,6 +222,46 @@ body {
     cursor: pointer;
 }
 
-.btn-bag-buy:hover {
-    background: var(--text-color);
+/* Making Responsive */
+@media (max-width: 1080px) {
+    .nav {
+        padding: 15px;
+    }
+
+    .section {
+        padding: 3rem 0 2rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .shop {
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav {
+        padding: 11px;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .cart {
+        width: 320px;
+    }
+}
+
+@media (max-width: 360px) {
+    .shop {
+        margin-top: 1rem !important;
+    }
+
+    .cart {
+        width: 280px;
+    }
 }
