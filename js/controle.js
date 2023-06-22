@@ -18,9 +18,7 @@ function Proximo() {
     }
 }
 
-//async function Cadastrar() {
-function Cadastrar() {
-
+async function Cadastrar() {
     //const categoria = db.collection('pessoas')
     // //const snapshot = await categoria.where('nome', '==', 'teste').get()
     //const snapshot = await categoria.get()
@@ -36,6 +34,13 @@ function Cadastrar() {
     var aux_Nome = nome.value;
     var aux_Telefone = telefone.value;
     var aux_Email = email.value;
+
+    const novoRegistro = await db.collection('pessoas').add({
+        nome: aux_Nome,
+        email: aux_Email,
+        telefone: aux_Telefone
+    })
+
     if (nome.value != "" && email.value != "" && telefone.value != "") {
         var novo = new Pessoa(nome.value, email.value, telefone.value);
         listaPessoas.push(novo);
