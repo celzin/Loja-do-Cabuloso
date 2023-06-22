@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
@@ -138,6 +139,7 @@
                                 <th scope="col">Produto</th>
                                 <th scope="col">Preço</th>
                                 <th scope="col">Quantidade</th>
+                                <th scope="col">Remover</th>
                                 <th scope="col">Total</th>
                             </tr>
                         </thead>
@@ -169,6 +171,9 @@
                                             class="reduced items-count" type="button"><i
                                                 class="lnr lnr-chevron-down"></i></button>
                                     </div>
+                                </td>
+                                <td>
+                                    <button onclick="removeCartItem(this)"><i class="fas fa-trash-alt"></i></button>
                                 </td>
                                 <td>
                                     <h5>R$ 349,99</h5>
@@ -203,6 +208,9 @@
                                     </div>
                                 </td>
                                 <td>
+                                    <button onclick="removeCartItem(this)"><i class="fas fa-trash-alt"></i></button>
+                                </td>
+                                <td>
                                     <h5>R$ 199,19</h5>
                                 </td>
                             </tr>
@@ -233,6 +241,9 @@
                                             class="reduced items-count" type="button"><i
                                                 class="lnr lnr-chevron-down"></i></button>
                                     </div>
+                                </td>
+                                <td>
+                                    <button onclick="removeCartItem(this)"><i class="fas fa-trash-alt"></i></button>
                                 </td>
                                 <td>
                                     <h5>R$ 229,99</h5>

@@ -7,6 +7,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="js/controle.js"></script>
     <!-- Mobile Specific Meta -->
+    <script src="js/addtocart.js"></script>
+    <!---->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
     <link rel="shortcut icon" href="img/logobannertop.png">
@@ -35,6 +37,7 @@
     <link rel="stylesheet" href="css/magnific-popup.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="icons/boxicons-2.1.4/css/boxicons.min.css" />
 </head>
 
 <body>
@@ -66,17 +69,6 @@
                                             Produto</a></li>
                                 </ul>
                             </li>
-                            <!--
-																							<li class="nav-item submenu dropdown">
-																								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-																									aria-haspopup="true" aria-expanded="false">Blog</a>
-																								<ul class="dropdown-menu">
-																									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-																									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a>
-																									</li>
-																								</ul>
-																							</li>
-							-->
                             <li class="nav-item submenu dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
                                     aria-haspopup="true" aria-expanded="false">Pedidos</a>
@@ -98,7 +90,12 @@
                             <li class="nav-item">
                                 <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
                             </li>
-                            <li class="nav-item"><a href="cart.html" class="cart"><span class="ti-bag"></span></a></li>
+                            <li class="nav-item">
+                                <i class='ti-bag' id="bag-icon"></i>
+                                <!--<li class="nav-item"><a href="" class="cart" id="bag-icon"><span class="ti-bag"></span></a>-->
+                            </li>
+                            </li>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -116,60 +113,38 @@
     </header>
     <!-- End Header Area -->
 
-    <!-- start banner Area -->
-    <section class="banner-area">
-        <div class="container">
-            <div class="row fullscreen align-items-center justify-content-start">
-                <div class="col-lg-12">
-                    <div class="active-banner-slider owl-carousel">
-                        <!-- single-slide -->
-                        <div class="row single-slide align-items-center d-flex">
-                            <div class="col-lg-5 col-md-6">
-                                <div class="banner-content">
-                                    <h1>Adidas Nova <br> Coleção!</h1>
-                                    <p>Alô, torcedor do Cabuloso! Chegou a hora de atualizar o seu manto
-                                        para a nova temporada com a Camisa Cruzeiro I 23/24 s/n° Torcedor Adidas
-                                        Masculina!
-                                        Homenageando os 20 anos da conquista da Tríplice Coroa.</p>
-                                    <div class="add-bag d-flex align-items-center">
-                                        <a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-                                        <span class="add-text text-uppercase">Adicionar ao Carrinho</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-7">
-                                <div class="banner-img">
-                                    <img class="img-fluid" src="img/banner/banner1-r.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- single-slide -->
-                        <div class="row single-slide">
-                            <div class="col-lg-5">
-                                <div class="banner-content">
-                                    <h1> <br>Nova Coleção</h1>
-                                    <p>Homenageando os 20 anos da conquista da Tríplice Coroa, essa camisa Cruzeiro
-                                        infantil 2023 apresenta tom predominantemente branco, listras diagonais em azul
-                                        claro e gola em V. O diferencial fica por conta das estrelas soltas em azul,
-                                        assim como na campanha vitoriosa em 2003. </p>
-                                    <div class="add-bag d-flex align-items-center">
-                                        <a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-                                        <span class="add-text text-uppercase">Adicionar ao Carrinho</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-7">
-                                <div class="banner-img">
-                                    <img class="img-fluid" src="img/banner/banner4-r.png" alt="">
-                                </div>
-                            </div>
-                        </div>
+    <!--================Cart Area =================-->
+    <br><br><br><br><br><br>
+    <!-- Cart -->
+    <div class="bag">
+        <h2 class="bag-title">Seu Carrinho</h2>
+        <!-- Content -->
+        <div class="=bag-content">
+            <div class="bag-box">
+                <img src="img/product/p1-r.png" alt="" class="bag-img">
+                <div class="detail-bag-box">
+                    <div class="bag-product-title">CAMISA CRUZEIRO II 23/24 S/N° TORCEDOR ADIDAS MASCULINA - BRANCO
                     </div>
+                    <div class="bag-price">R$ 349.99</div>
+                    <input type="number" value="1" class="bag-quantity">
                 </div>
+                <!-- Remove Cart -->
+                <i class='bx bxs-trash-alt cart-remove'></i>
             </div>
+            <!-- Total -->
+            <div class="total-bag">
+                <div class="total-bag-title">Total</div>
+                <div class="total-bag-price">R$ 0</div>
+            </div>
+            <!-- Buy Button -->
+            <button type="button" class="btn-bag-buy">Comprar</button>
+            <!-- Cart Close -->
+            <i class='bx bx-x' id="close-bag"></i>
         </div>
-    </section>
-    <!-- End banner Area -->
+    </div>
+
+    <!--================End Cart Area =================-->
+
 
     <!-- start product Area -->
     <section class="owl-carousel active-product-area section_gap">
@@ -726,36 +701,7 @@
     </section>
     <!-- end product Area -->
 
-    <!--================Cart Area =================-->
 
-    <!-- Cart -->
-    <div class="cart">
-        <h2 class="cart-tite">Seu Carrinho</h2>
-        <!-- Content -->
-        <div class="=cart-content">
-            <div class="cart-box">
-                <img src="img/product/p1-r.png" alt="" class="cart-img">
-                <div class="detail-box">
-                    <div class="cart-product-title">Nome</div>
-                    <div class="cart-price">$25</div>
-                    <input type="number" value="1" class="cart-quantity">
-                </div>
-                <!-- Remove Cart -->
-                <i class='bx bxs-trash-alt cart-remove'></i>
-            </div>
-            <!-- Total -->
-            <div class="total">
-                <div class="total-title">Total</div>
-                <div class="total-price">$0</div>
-            </div>
-            <!-- Buy Button -->
-            <button type="button" class="btn-buy">Comprar</button>
-            <!-- Cart Close -->
-            <i class='bx bx-x' id="close-cart"></i>
-        </div>
-    </div>
-
-    <!--================End Cart Area =================-->
 
     <!-- start footer Area -->
 
@@ -847,7 +793,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
     <script src="js/gmaps.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/addtocart.js"></script>
+
 </body>
 
 </html>
