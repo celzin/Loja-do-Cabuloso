@@ -18,7 +18,17 @@ function Proximo() {
     }
 }
 
+//async function Cadastrar() {
 function Cadastrar() {
+
+    //const categoria = db.collection('pessoas')
+    // //const snapshot = await categoria.where('nome', '==', 'teste').get()
+    //const snapshot = await categoria.get()
+    //snapshot.forEach(doc => {
+    //    var dados = doc.data()
+    //    console.log(doc.id, ': ', dados.nome, dados.email, dados.telefone)
+    //});
+
     var nome = document.getElementById("nomeid");
     var telefone = document.getElementById("telefoneid");
     var email = document.getElementById("emailid");
@@ -136,3 +146,16 @@ function RemoverElemento(index) {
     AtualizarDadosCadastrados();
     CriarTabela();
 }
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCKJwXWqwUu-BHmq_KjyG_ldri5vxi0o1g",
+    authDomain: "cabeludo-e0abf.firebaseapp.com",
+    databaseURL: "https://cabeludo-e0abf-default-rtdb.firebaseio.com",
+    projectId: "cabeludo-e0abf",
+    storageBucket: "cabeludo-e0abf.appspot.com",
+    messagingSenderId: "122903428334",
+    appId: "1:122903428334:web:9e0eeb4d1c70b314c6c7ff"
+};
+
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
