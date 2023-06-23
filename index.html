@@ -34,6 +34,9 @@
 	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/cart.css">
+	<!-- Box Icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -65,17 +68,6 @@
 											Produto</a></li>
 								</ul>
 							</li>
-							<!--
-																							<li class="nav-item submenu dropdown">
-																								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-																									aria-haspopup="true" aria-expanded="false">Blog</a>
-																								<ul class="dropdown-menu">
-																									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-																									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a>
-																									</li>
-																								</ul>
-																							</li>
-							-->
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
 									aria-haspopup="true" aria-expanded="false">Pedidos</a>
@@ -94,7 +86,27 @@
 							<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="cart.html" class="cart"><span class="ti-bag"></span></a></li>
+							<li class="nav-item">
+								<!-- <i class="bx bx-shopping-bag" id="bag-icon"></i> -->
+								<button class="search"><span class="ti-bag" id="bag-icon"></span></button>
+								<!-- Cart -->
+								<div class="bag">
+									<h2 class="bag-title">Seu Carrinho</h2>
+									<!-- Content -->
+									<div class="bag-content">
+
+									</div>
+									<!-- Total -->
+									<div class="total-bag">
+										<div class="total-bag-title">Total</div>
+										<div class="total-bag-price">$0</div>
+									</div>
+									<!-- Buy Button -->
+									<button type="button" class="btn-bag-buy">Comprar</button>
+									<!-- Cart Close -->
+									<i class='bx bx-x' id="close-bag"></i>
+								</div>
+							</li>
 							<li class="nav-item">
 								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
 							</li>
@@ -130,10 +142,6 @@
 										para a nova temporada com a Camisa Cruzeiro I 23/24 s/n° Torcedor Adidas
 										Masculina!
 										Homenageando os 20 anos da conquista da Tríplice Coroa.</p>
-									<div class="add-bag d-flex align-items-center">
-										<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-										<span class="add-text text-uppercase">Adicionar ao Carrinho</span>
-									</div>
 								</div>
 							</div>
 							<div class="col-lg-7">
@@ -151,10 +159,6 @@
 										infantil 2023 apresenta tom predominantemente branco, listras diagonais em azul
 										claro e gola em V. O diferencial fica por conta das estrelas soltas em azul,
 										assim como na campanha vitoriosa em 2003. </p>
-									<div class="add-bag d-flex align-items-center">
-										<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-										<span class="add-text text-uppercase">Adicionar ao Carrinho</span>
-									</div>
 								</div>
 							</div>
 							<div class="col-lg-7">
@@ -288,560 +292,75 @@
 	<!-- End category Area -->
 
 	<!-- start product Area -->
-	<section class="owl-carousel active-product-area section_gap">
-		<!-- single product slide -->
-		<div class="single-product-slider">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-lg-6 text-center">
-						<div class="section-title">
-							<h1>Últimos Produtos</h1>
-							<p></p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p1-r.png" alt="">
-							<div class="product-details">
-								<h6>CAMISA CRUZEIRO II 23/24 S/N° TORCEDOR ADIDAS MASCULINA - BRANCO</h6>
-								<div class="price">
-									<h6>R$ 349,99</h6>
-									<h6 class="l-through">R$399,99</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p2-r.png" alt="">
-							<div class="product-details">
-								<h6>CAMISA CRUZEIRO I 21/22 S/N° TORCEDOR ADIDAS MASCULINA - AZUL</h6>
-								<div class="price">
-									<h6>R$199,19</h6>
-									<h6 class="l-through">R$279,99</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p3-r.png" alt="">
-							<div class="product-details">
-								<h6>CAMISA CRUZEIRO 23/24 S/N° TREINO ADIDAS MASCULINA - PRATA</h6>
-								<div class="price">
-									<h6>R$229,99</h6>
-									<h6 class="l-through">R$399,90</h6>
-								</div>
-								<div class="prd-bottom">
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p4-r.png" alt="">
-							<div class="product-details">
-								<h6>CAMISA CRUZEIRO II 22/23 S/N° TORCEDOR ADIDAS MASCULINA - BRANCO</h6>
-								<div class="price">
-									<h6>R$229,99</h6>
-									<h6 class="l-through">R$299,99</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p5-r.png" alt="">
-							<div class="product-details">
-								<h6>JAQUETA CRUZEIRO 23/24 ADIDAS PRÉ JOGO MASCULINA - ROXO</h6>
-								<div class="price">
-									<h6>R$599,99</h6>
-									<h6 class="l-through">R$799,00</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p6-r.png" alt="">
-							<div class="product-details">
-								<h6>BONÉ CRUZEIRO ESTRELAS AZUL - AZUL</h6>
-								<div class="price">
-									<h6>R$139,90</h6>
-									<h6 class="l-through">R$169,90</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p7-r.png" alt="">
-							<div class="product-details">
-								<h6>CALÇÃO CRUZEIRO 23/24 TREINO ADIDAS MASCULINO - ROXO</h6>
-								<div class="price">
-									<h6>R$249,99</h6>
-									<h6 class="l-through">R$399,90</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p8-r.png" alt="">
-							<div class="product-details">
-								<h6>CAMISA CRUZEIRO III 22/23 S/N° TORCEDOR ADIDAS MASCULINA - AMARELO</h6>
-								<div class="price">
-									<h6>R$229,99</h6>
-									<h6 class="l-through">R$299,99</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+	<section class="shop container">
+		<h2 class="section-title">Últimas Ofertas</h2>
 		</div>
-		<!-- single product slide -->
-		<div class="single-product-slider">
-			<div class="container">
-				<div class="row justify-content-center">
-					<div class="col-lg-6 text-center">
-						<div class="section-title">
-							<h1>Coming Products</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-								incididunt ut labore et
-								dolore
-								magna aliqua.</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p6.jpg" alt="">
-							<div class="product-details">
-								<h6>BONÉ CRUZEIRO ESTRELAS AZUL - AZUL</h6>
-								<div class="price">
-									<h6>R$150.00</h6>
-									<h6 class="l-through">R$210.00</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p8.jpg" alt="">
-							<div class="product-details">
-								<h6>addidas New Hammer sole
-									for Sports person</h6>
-								<div class="price">
-									<h6>R$150.00</h6>
-									<h6 class="l-through">R$210.00</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p3.jpg" alt="">
-							<div class="product-details">
-								<h6>addidas New Hammer sole
-									for Sports person</h6>
-								<div class="price">
-									<h6>R$150.00</h6>
-									<h6 class="l-through">R$210.00</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p5.jpg" alt="">
-							<div class="product-details">
-								<h6>addidas New Hammer sole
-									for Sports person</h6>
-								<div class="price">
-									<h6>R$150.00</h6>
-									<h6 class="l-through">R$210.00</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p1.jpg" alt="">
-							<div class="product-details">
-								<h6>addidas New Hammer sole
-									for Sports person</h6>
-								<div class="price">
-									<h6>R$150.00</h6>
-									<h6 class="l-through">R$210.00</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p4.jpg" alt="">
-							<div class="product-details">
-								<h6>addidas New Hammer sole
-									for Sports person</h6>
-								<div class="price">
-									<h6>R$150.00</h6>
-									<h6 class="l-through">R$210.00</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p1.jpg" alt="">
-							<div class="product-details">
-								<h6>addidas New Hammer sole
-									for Sports person</h6>
-								<div class="price">
-									<h6>R$150.00</h6>
-									<h6 class="l-through">R$210.00</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-3 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid" src="img/product/p8.jpg" alt="">
-							<div class="product-details">
-								<h6>addidas New Hammer sole
-									for Sports person</h6>
-								<div class="price">
-									<h6>R$150.00</h6>
-									<h6 class="l-through">R$210.00</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">Adicionar ao Carrinho</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Lista de Desejos</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-sync"></span>
-										<p class="hover-text">Comparar</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Ver mais</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+		<!-- Content -->
+		<div class="shop-content">
+			<!-- Box 1 -->
+			<div class="product-box">
+				<img src="img/product/p1-r.png" alt="" class="product-img">
+				<h2 class="product-title">CAMISA CRUZEIRO II 23/24 S/N° TORCEDOR ADIDAS MASCULINA - BRANCO</h2>
+				<span class="price">$349.99</span>
+				<i class="bx bx-shopping-bag add-bag"></i>
+			</div>
+			<!-- Box 2 -->
+			<div class="product-box">
+				<img src="img/product/p2-r.png" alt="" class="product-img">
+				<h2 class="product-title">CAMISA CRUZEIRO I 21/22 S/N° TORCEDOR ADIDAS MASCULINA - AZUL</h2>
+				<span class="price">$199.19</span>
+				<i class="bx bx-shopping-bag add-bag"></i>
+			</div>
+			<!-- Box 3 -->
+			<div class="product-box">
+				<img src="img/product/p3-r.png" alt="" class="product-img">
+				<h2 class="product-title">CAMISA CRUZEIRO 23/24 S/N° TREINO ADIDAS MASCULINA - PRATA</h2>
+				<span class="price">$229.99</span>
+				<i class="bx bx-shopping-bag add-bag"></i>
+			</div>
+			<!-- Box 4 -->
+			<div class="product-box">
+				<img src="img/product/p4-r.png" alt="" class="product-img">
+				<h2 class="product-title">CAMISA CRUZEIRO II 22/23 S/N° TORCEDOR ADIDAS MASCULINA - BRANCO</h2>
+				<span class="price">$229.99</span>
+				<i class="bx bx-shopping-bag add-bag"></i>
+			</div>
+			<!-- Box 5 -->
+			<div class="product-box">
+				<img src="img/product/p5-r.png" alt="" class="product-img">
+				<h2 class="product-title">JAQUETA CRUZEIRO 23/24 ADIDAS PRÉ JOGO MASCULINA - ROXO</h2>
+				<span class="price">$599.99</span>
+				<i class="bx bx-shopping-bag add-bag"></i>
+			</div>
+			<!-- Box 6 -->
+			<div class="product-box">
+				<img src="img/product/p6-r.png" alt="" class="product-img">
+				<h2 class="product-title">BONÉ CRUZEIRO ESTRELAS AZUL - AZUL</h2>
+				<span class="price">$139.90</span>
+				<i class="bx bx-shopping-bag add-bag"></i>
+			</div>
+			<!-- Box 7 -->
+			<div class="product-box">
+				<img src="img/product/p7-r.png" alt="" class="product-img">
+				<h2 class="product-title">CALÇÃO CRUZEIRO 23/24 TREINO ADIDAS MASCULINO - ROXO</h2>
+				<span class="price">$249.99</span>
+				<i class="bx bx-shopping-bag add-bag"></i>
+			</div>
+			<!-- Box 8 -->
+			<div class="product-box">
+				<img src="img/product/p8-r.png" alt="" class="product-img">
+				<h2 class="product-title">CAMISA CRUZEIRO III 22/23 S/N° TORCEDOR ADIDAS MASCULINA - AMARELO</h2>
+				<span class="price">$229.99</span>
+				<i class="bx bx-shopping-bag add-bag"></i>
 			</div>
 		</div>
 	</section>
+
 	<!-- end product Area -->
+	<!-- JS -->
+	<script src="js/addtocart.js"></script>
+
+	<br><br><br><br>
 
 	<!-- Start exclusive deal Area -->
 	<section class="exclusive-deal-area">
@@ -880,32 +399,20 @@
 					<div class="active-exclusive-product-slider">
 						<!-- single exclusive carousel -->
 						<div class="single-exclusive-slider">
-							<img class="img-fluid" src="img/product/p5-r.png" alt="">
-							<div class="product-details">
-								<div class="price">
-									<h6>R$599,99</h6>
-									<h6 class="l-through">R$699,99</h6>
-								</div>
-								<h4>JAQUETA CRUZEIRO 23/24 ADIDAS PRÉ JOGO MASCULINA - ROXO</h4>
-								<div class="add-bag d-flex align-items-center justify-content-center">
-									<a class="add-btn" href=""><span class="ti-bag"></span></a>
-									<span class="add-text text-uppercase">Adicionar ao Carrinho</span>
-								</div>
+							<div class="product-box">
+								<img src="img/product/p5-r.png" alt="" class="product-img">
+								<h2 class="product-title">JAQUETA CRUZEIRO 23/24 ADIDAS PRÉ JOGO MASCULINA - ROXO</h2>
+								<span class="price">$599.99</span>
+								<i class="bx bx-shopping-bag add-bag"></i>
 							</div>
 						</div>
 						<!-- single exclusive carousel -->
 						<div class="single-exclusive-slider">
-							<img class="img-fluid" src="img/product/p6-r.png" alt="">
-							<div class="product-details">
-								<div class="price">
-									<h6>R$139,90</h6>
-									<h6 class="l-through">R$169,90</h6>
-								</div>
-								<h4>BONÉ CRUZEIRO ESTRELAS AZUL - AZUL</h4>
-								<div class="add-bag d-flex align-items-center justify-content-center">
-									<a class="add-btn" href=""><span class="ti-bag"></span></a>
-									<span class="add-text text-uppercase">Adicionar ao Carrinho</span>
-								</div>
+							<div class="product-box">
+								<img src="img/product/p6-r.png" alt="" class="product-img">
+								<h2 class="product-title">BONÉ CRUZEIRO ESTRELAS AZUL - AZUL</h2>
+								<span class="price">$139.90</span>
+								<i class="bx bx-shopping-bag add-bag"></i>
 							</div>
 						</div>
 					</div>

@@ -17,9 +17,9 @@
     --bg-color: #fff;
 }
 
-img {
+/* img {
     width: 100%;
-}
+} */
 
 body {
     color: var(--text-color);
@@ -41,12 +41,14 @@ header {
     z-index: 100;
 }
 
+
 .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
 }
+
 
 .logo {
     font-size: 1.1rem;
@@ -55,7 +57,7 @@ header {
 }
 
 #bag-icon {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
@@ -224,6 +226,8 @@ header {
 
 /* Making Responsive */
 @media (max-width: 1080px) {
+
+
     .nav {
         padding: 15px;
     }
