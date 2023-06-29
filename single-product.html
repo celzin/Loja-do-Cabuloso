@@ -30,6 +30,9 @@
 	<link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" />
 	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/cart.css">
+	<!-- Box Icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
@@ -61,17 +64,6 @@
 											Produto</a></li>
 								</ul>
 							</li>
-							<!--
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
-									aria-haspopup="true" aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a>
-									</li>
-								</ul>
-							</li>
-							-->
 							<li class="nav-item submenu dropdown">
 								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
 									aria-haspopup="true" aria-expanded="false">Pedidos</a>
@@ -90,7 +82,29 @@
 							<li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
 						</ul>
 						<ul class="nav navbar-nav navbar-right">
-							<li class="nav-item"><a href="cart.html" class="cart"><span class="ti-bag"></span></a></li>
+							<li class="nav-item">
+								<!-- <i class="bx bx-shopping-bag" id="bag-icon"></i> -->
+								<button class="search"><span class="ti-bag" id="bag-icon"
+										data-quantity="0"></span></button>
+								<!-- Start Cart -->
+								<div class="bag">
+									<h2 class="bag-title">Seu Carrinho</h2>
+									<!-- Content -->
+									<div class="bag-content">
+
+									</div>
+									<!-- Total -->
+									<div class="total-bag">
+										<div class="total-bag-title">Total</div>
+										<div class="total-bag-price">$0</div>
+									</div>
+									<!-- Buy Button -->
+									<button type="button" class="btn-bag-buy">Comprar</button>
+									<!-- Cart Close -->
+									<i class='bx bx-x' id="close-bag"></i>
+								</div>
+								<!-- End Cart -->
+							</li>
 							<li class="nav-item">
 								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
 							</li>
@@ -171,7 +185,7 @@
 								class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
 						</div>
 						<div class="card_area d-flex align-items-center">
-							<a class="primary-btn" href="#">Adicionar ao Carrinho</a>
+							<a class="primary-btn add-bag" href="#">Adicionar ao Carrinho</a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-diamond"></i></a>
 							<a class="icon_btn" href="#"><i class="lnr lnr lnr-heart"></i></a>
 						</div>
@@ -619,6 +633,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/addtocart.js"></script>
 
 </body>
 
