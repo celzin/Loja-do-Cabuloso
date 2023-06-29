@@ -1,0 +1,17 @@
+const firebaseConfig = {
+    apiKey: "AIzaSyCKJwXWqwUu-BHmq_KjyG_ldri5vxi0o1g",
+    authDomain: "cabeludo-e0abf.firebaseapp.com",
+    projectId: "cabeludo-e0abf",
+    storageBucket: "cabeludo-e0abf.appspot.com",
+    messagingSenderId: "122903428334",
+    appId: "1:122903428334:web:9e0eeb4d1c70b314c6c7ff"
+};
+
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
+const categoria = db.collection('pessoas')
+const snapshot = await categoria.where('nome', '==', 'Pedro').get()
+snapshot.forEach(doc => {
+    var dados = doc.data()
+    console.log(doc.id, ': ', dados.nome, dados.email, dados.telefone);
+});
