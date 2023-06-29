@@ -32,6 +32,9 @@
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/cart.css">
 	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="css/cart.css">
+	<!-- Box Icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body id="category">
@@ -83,8 +86,9 @@
 						<ul class="nav navbar-nav navbar-right">
 							<li class="nav-item">
 								<!-- <i class="bx bx-shopping-bag" id="bag-icon"></i> -->
-								<button class="search"><span class="ti-bag" id="bag-icon"></span></button>
-								<!-- Cart -->
+								<button class="search"><span class="ti-bag" id="bag-icon"
+										data-quantity="0"></span></button>
+								<!-- Start Cart -->
 								<div class="bag">
 									<h2 class="bag-title">Seu Carrinho</h2>
 									<!-- Content -->
@@ -101,6 +105,7 @@
 									<!-- Cart Close -->
 									<i class='bx bx-x' id="close-bag"></i>
 								</div>
+								<!-- End Cart -->
 							</li>
 							<li class="nav-item">
 								<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
@@ -677,6 +682,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/addtocart.js"></script>
 </body>
 
 </html>
