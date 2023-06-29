@@ -63,6 +63,7 @@ function removeBagItem(event) {
     buttonClicked.parentElement.remove();
     updatetotal();
     saveCartItems();
+    updateCartIcon();
 }
 
 // Quantity Changes
