@@ -57,7 +57,8 @@ header {
 }
 
 #bag-icon {
-    font-size: 1.2rem;
+    position: relative;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 
@@ -68,11 +69,11 @@ header {
 #bag-icon[data-quantity]::after {
     content: attr(data-quantity);
     position: absolute;
-    top: 0;
-    right: -12px;
+    top: 12px;
+    right: -14px;
     width: 20px;
     height: 20px;
-    background: var(--text-color);
+    background: var(--main-color);
     border-radius: 50%;
     color: white;
     font-size: 12px;

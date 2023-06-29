@@ -73,7 +73,7 @@ function quantityChanged(event) {
     }
     updatetotal();
     saveCartItems();
-    // updateCartIcon();
+    updateCartIcon();
 }
 
 // Add to Cart
@@ -87,7 +87,7 @@ function addCartClicked(event) {
     addProductToCart(title, price, productImg);
     updatetotal();
     saveCartItems();
-    // updateCartIcon();
+    updateCartIcon();
 }
 
 function addProductToCart(title, price, productImg) {
@@ -119,7 +119,7 @@ function addProductToCart(title, price, productImg) {
         .getElementsByClassName('bag-quantity')[0]
         .addEventListener('change', quantityChanged);
     saveCartItems();
-    // updateCartIcon();
+    updateCartIcon();
 }
 
 // Update Total
@@ -200,7 +200,7 @@ function updateCartIcon() {
 
     for (var i = 0; i < cartBoxes.length; i++) {
         var cartBox = cartBoxes[i];
-        var quantityElement = cartBox.getElementsByClassName('cart-quantity')[0];
+        var quantityElement = cartBox.getElementsByClassName('bag-quantity')[0];
         quantity += parseInt(quantityElement.value);
     }
     var cartIcon = document.querySelector('#bag-icon');
