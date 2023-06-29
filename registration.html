@@ -2,6 +2,10 @@
 <html lang="zxx" class="no-js">
 
 <head>
+    <!-- CRUD -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/controle.js"></script>
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
@@ -136,28 +140,38 @@
                         <h3>Detalhes de Cadastro</h3>
                         <form class="row contact_form" action="#" method="post" novalidate="novalidate">
                             <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="name" name="name">
-                                <span class="placeholder" data-placeholder="Email"></span>
+                                <input type="text" class="form-control" id="emailid" name="email"
+                                    placeholder="Digite seu melhor e-mail">
+                                <!--<input type="text" class="form-control" id="emailid" name="email">
+                                <span class="placeholder" data-placeholder="Email"></span>-->
                             </div>
                             <div class="col-md-6 form-group p_star">
-                                <input type="password" class="form-control" id="password" name="password">
-                                <span class="placeholder" data-placeholder="Senha"></span>
+                                <input type="password" class="form-control" id="passwordid" name="password"
+                                    placeholder="Senha">
+                                <!--<input type="password" class="form-control" id="passwordid" name="password">
+                                <span class="placeholder" data-placeholder="Senha"></span>-->
                             </div>
                             <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="first" name="name">
-                                <span class="placeholder" data-placeholder="Primeiro nome"></span>
+                                <input type="text" class="form-control" id="firstid" name="first"
+                                    placeholder="Primeiro nome">
+                                <!--<input type="text" class="form-control" id="firstid" name="first">
+                                <span class="placeholder" data-placeholder="Primeiro nome"></span>-->
                             </div>
                             <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="last" name="name">
-                                <span class="placeholder" data-placeholder="Último nome"></span>
+                                <input type="text" class="form-control" id="lastid" name="last"
+                                    placeholder="Último nome">
+                                <!--<input type="text" class="form-control" id="lastid" name="last">
+                                <span class="placeholder" data-placeholder="Último nome"></span>-->
                             </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="company" name="company"
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control" id="nickid" name="nick"
                                     placeholder="Como quer ser chamado">
                             </div>
                             <div class="col-md-6 form-group p_star">
-                                <input type="text" class="form-control" id="number" name="number">
-                                <span class="placeholder" data-placeholder="Num. de Celular"></span>
+                                <input type="text" class="form-control" id="numberid" name="number"
+                                    placeholder="Número do Celular">
+                                <!--<input type="text" class="form-control" id="numberid" name="number">
+                                <span class="placeholder" data-placeholder="Número de Celular"></span>-->
                             </div>
                             <!--
                             <div class="col-md-6 form-group p_star">
@@ -177,30 +191,36 @@
                                     <h3>Informações da Entrega</h3>
                                 </div>
                                 <div class="col-md-12 form-group">
-                                    <input type="text" class="form-control" id="zip" name="zip" placeholder="CEP">
+                                    <input type="text" class="form-control" id="zipid" name="zip" placeholder="CEP">
+                                    <!--<input type="text" class="form-control" id="zip" name="zip" placeholder="CEP">-->
                                 </div>
                                 <div class="col-md-12 form-group p_star">
-                                    <select class="country_select">
-                                        <option value="1">Minas Gerais</option>
-                                        <option value="2">Rio de Janeiro</option>
-                                        <option value="3">Bahia</option>
-                                        <option value="4">São Paulo</option>
+                                    <select class="country_select" id="regionid">
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="SP">São Paulo</option>
                                     </select>
                                 </div>
                                 <div class="col-md-12 form-group p_star">
-                                    <input type="text" class="form-control" id="add1" name="add1">
-                                    <span class="placeholder" data-placeholder="Endereço"></span>
+                                    <input type="text" class="form-control" id="addid" name="add"
+                                        placeholder="Endereço">
+                                    <!--<input type="text" class="form-control" id="add1" name="add1">
+                                    <span class="placeholder" data-placeholder="Endereço"></span>-->
                                 </div>
                                 <div class="col-md-12 form-group p_star">
-                                    <input type="text" class="form-control" id="city" name="city">
-                                    <span class="placeholder" data-placeholder="Cidade"></span>
+                                    <input type="text" class="form-control" id="cityid" name="city"
+                                        placeholder="Cidade">
+                                    <!--<input type="text" class="form-control" id="city" name="city">
+                                    <span class="placeholder" data-placeholder="Cidade"></span>-->
                                 </div>
                                 <div class="col-md-12 form-group">
                                 </div>
-                                <textarea class="form-control" name="message" id="message" rows="1"
+                                <textarea class="form-control" name="message" id="messageid" rows="1"
                                     placeholder="Observações da entrega"></textarea>
                                 <div class="col-md-12 form-group">
-                                    <button type="submit" value="submit" class="primary-btn">Confirmar</button>
+                                    <button type="button" value="submit" class="primary-btn"
+                                        onclick="Cadastrar();">Confirmar</button>
                                 </div>
                             </div>
                         </form>
