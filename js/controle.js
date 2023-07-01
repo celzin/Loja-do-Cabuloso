@@ -1,4 +1,3 @@
-var pagina = -1;
 var elementos = 0;
 
 class Pessoa {
@@ -19,23 +18,14 @@ class Pessoa {
 
 var listaPessoas = [];
 
-function Proximo() {
-    if (elementos > 0 && pagina < elementos - 1) {
-        pagina++;
-        Exibir();
-    } else {
-        alert("Não existe uma próxima página");
-    }
-}
-
 async function Cadastrar() {
-    //const categoria = db.collection('pessoas')
-    // //const snapshot = await categoria.where('nome', '==', 'teste').get()
-    //const snapshot = await categoria.get()
-    //snapshot.forEach(doc => {
-    //    var dados = doc.data()
-    //    console.log(doc.id, ': ', dados.nome, dados.email, dados.telefone)
-    //});
+
+    const camisaI2122 = {
+        name: 'CAMISA CRUZEIRO I 21/22 S/N° TORCEDOR ADIDAS MASCULINA - AZUL',
+        price: '$199.19',
+        type: 'camisa'
+    };
+    const res2 = await db.collection('produtos').doc('camisa').set(camisaI2122);
 
     // CADASTRO PESSOA
     var email = document.getElementById("emailid");
@@ -100,49 +90,10 @@ async function Cadastrar() {
 
         // Atualiza a área de exibição dos dados cadastrados
         AtualizarDadosCadastrados();
-        CriarTabela();
 
         elementos++;
-        pagina = -1;
     } else {
         alert("Preencha os campos obrigatórios!");
-    }
-}
-
-function Exibir() {
-    document.getElementById("emailid").value = listaPessoas[pagina].email;
-    document.getElementById("firstid").value = listaPessoas[pagina].nome;
-    document.getElementById("lastid").value = listaPessoas[pagina].sobrenome;
-    document.getElementById("nickid").value = listaPessoas[pagina].nick;
-    document.getElementById("numberid").value = listaPessoas[pagina].number;
-
-    document.getElementById("zipid").value = listaPessoas[pagina].email;
-    document.getElementById("regionid").value = listaPessoas[pagina].nome;
-    document.getElementById("addid").value = listaPessoas[pagina].sobrenome;
-    document.getElementById("cityid").value = listaPessoas[pagina].nick;
-    document.getElementById("messageid").value = listaPessoas[pagina].number;
-}
-
-function Limpar() {
-    document.getElementById("emailid").value = "";
-    document.getElementById("firstid").value = "";
-    document.getElementById("lastid").value = "";
-    document.getElementById("nickid").value = "";
-    document.getElementById("numberid").value = "";
-
-    document.getElementById("zipid").value = "";
-    document.getElementById("regionid").value = "";
-    document.getElementById("addid").value = "";
-    document.getElementById("cityid").value = "";
-    document.getElementById("messageid").value = "";
-}
-
-function Anterior() {
-    if (elementos > 0 && pagina > 0) {
-        pagina--;
-        Exibir();
-    } else {
-        alert("Não existe uma página anterior");
     }
 }
 
@@ -178,89 +129,6 @@ function AtualizarDadosCadastrados() {
     }
 }
 
-function CriarTabela() {
-    var tabela = document.getElementById("tabelaid");
-    tabela.innerHTML = ""; // Limpa a tabela anterior
-
-    // Cria a linha de cabeçalho
-    var linhaCabecalho = document.createElement("tr");
-    var colunaCabecalho1 = document.createElement("th");
-    var colunaCabecalho2 = document.createElement("th");
-    var colunaCabecalho3 = document.createElement("th");
-    var colunaCabecalho4 = document.createElement("th");
-    var colunaCabecalho5 = document.createElement("th");
-    var colunaCabecalho6 = document.createElement("th");
-    colunaCabecalho1.textContent = "Email";
-    colunaCabecalho2.textContent = "Nome";
-    colunaCabecalho3.textContent = "Sobrenome";
-    colunaCabecalho4.textContent = "Nick";
-    colunaCabecalho5.textContent = "Telefone";
-    colunaCabecalho6.textContent = "Ação";
-    linhaCabecalho.appendChild(colunaCabecalho1);
-    linhaCabecalho.appendChild(colunaCabecalho2);
-    linhaCabecalho.appendChild(colunaCabecalho3);
-    linhaCabecalho.appendChild(colunaCabecalho4);
-    linhaCabecalho.appendChild(colunaCabecalho5);
-    linhaCabecalho.appendChild(colunaCabecalho6);
-    tabela.appendChild(linhaCabecalho);
-
-    // Cria as linhas de dados
-    for (var i = 0; i < listaPessoas.length; i++) {
-        var pessoa = listaPessoas[i];
-        var linha = document.createElement("tr");
-        var coluna1 = document.createElement("td");
-        var coluna2 = document.createElement("td");
-        var coluna3 = document.createElement("td");
-        var coluna4 = document.createElement("td");
-        var coluna5 = document.createElement("td");
-        var coluna6 = document.createElement("td");
-        var coluna7 = document.createElement("td");
-        var coluna8 = document.createElement("td");
-        var coluna9 = document.createElement("td");
-        var coluna10 = document.createElement("td");
-        var coluna12 = document.createElement("td");
-        var coluna11 = document.createElement("td");
-        coluna1.textContent = pessoa.email;
-        coluna2.textContent = pessoa.nome;
-        coluna3.textContent = pessoa.sobrenome;
-        coluna4.textContent = pessoa.nick;
-        coluna5.textContent = pessoa.telefone;
-
-        coluna6.textContent = pessoa.cep;
-        coluna7.textContent = pessoa.estado;
-        coluna8.textContent = pessoa.endereco;
-        coluna9.textContent = pessoa.cidade;
-        coluna10.textContent = pessoa.mensagem;
-
-        var botaoRemover = document.createElement("button");
-        botaoRemover.textContent = "Remover";
-        botaoRemover.setAttribute("onclick", "RemoverElemento(" + i + ")");
-        coluna11.appendChild(botaoRemover);
-
-        linha.appendChild(coluna1);
-        linha.appendChild(coluna2);
-        linha.appendChild(coluna3);
-        linha.appendChild(coluna4);
-        linha.appendChild(coluna5);
-        linha.appendChild(coluna6);
-        linha.appendChild(coluna7);
-        linha.appendChild(coluna8);
-        linha.appendChild(coluna9);
-        linha.appendChild(coluna10);
-        linha.appendChild(coluna11);
-        tabela.appendChild(linha);
-    }
-}
-
-function RemoverElemento(index) {
-    listaPessoas.splice(index, 1);
-    elementos--;
-    pagina = -1;
-
-    AtualizarDadosCadastrados();
-    CriarTabela();
-}
-
 const firebaseConfig = {
     apiKey: "AIzaSyCKJwXWqwUu-BHmq_KjyG_ldri5vxi0o1g",
     authDomain: "cabeludo-e0abf.firebaseapp.com",
@@ -272,4 +140,4 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
-var db = firebase.firestore();
+var db = firebase.firestore();  
