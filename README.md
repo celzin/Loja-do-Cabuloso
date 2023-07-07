@@ -59,31 +59,62 @@ Em suma, espera-se que este projeto proporcione uma oportunidade de aprofundar o
 
 # Carrinho de Compras
 
+<div align= "justify">
+
+O sistema de carrinho de compras é uma parte essencial de muitos sites de comércio eletrônico, permitindo aos usuários selecionar e organizar produtos para compra de forma conveniente.  Algumas das funcionalidades são:
+
+1. Abrir e fechar o carrinho: Ao clicar no ícone do carrinho , o carrinho é aberto, exibindo os itens adicionados. Da mesma forma, ao clicar no botão de fechar, o carrinho é fechado e ocultado.
+
+2. Adicionar itens ao carrinho: Ao clicar no botão "Adicionar ao Carrinho" de um determinado produto, as informações do produto (como título, preço e imagem) são capturadas e um novo item é adicionado ao carrinho.
+
+3. Remover itens do carrinho: Ao clicar nesse botão, o item correspondente é removido do carrinho.
+
+4. Alterar a quantidade de itens: Ao modificar o valor desse campo, a quantidade do item é atualizada e o total do carrinho é recalculado.
+
+5. Atualizar o total do carrinho;
+
+6. Manter os itens do carrinho ao recarregar a página: Os itens adicionados ao carrinho são armazenados no armazenamento local (localStorage), permitindo que sejam mantidos mesmo após a atualização da página.
+
+7. Atualizar o ícone do carrinho com a quantidade de itens: Isso permite exibir visualmente a quantidade de itens no ícone do carrinho.
+
+Essas são as principais funcionalidades implementadas no código do carrinho de compras. É importante observar que algumas partes do código estão comentadas ou não foram implementadas completamente, como a funcionalidade de finalizar a compra e limpar o carrinho após o pagamento.
+
+Após a conclusão de uma compra bem-sucedida, os detalhes do pedido são armazenados em um banco de dados específico [dashboard](dashboard.stripe.com) para o sistema de gerenciamento de pedidos. Esse banco de dados é usado para registrar as informações essenciais relacionadas aos pedidos dos clientes, permitindo um acompanhamento preciso e um melhor gerenciamento das transações.
+</div>
+
 <p align="center">
 <img src="git_imgs/payment.gif" width="900"/> 
 </p>
 <p align="center">
-<em>Imagem 4: Print da pagina de categorias de produtos</em>
+<em>Imagem 4: Gif de uma compra bem suscedida no site</em>
 </p>
 
 <p align="center">
-<img src="git_imgs/dashbboard1.png" width="900"/> 
+<img src="git_imgs/dashboard1.png" width="900"/> 
 </p>
 <p align="center">
-<em>Imagem 5: Print da pagina de categorias de produtos</em>
+<em>Imagem 5: Print do banco de dados com os itens comprados</em>
 </p>
 
 <p align="center">
-<img src="git_imgs/dashbboard2.png" width="900"/> 
+<img src="git_imgs/dashboard2.png" width="900"/> 
 </p>
 <p align="center">
-<em>Imagem 6: Print da pagina de categorias de produtos</em>
+<em>Imagem 6: Print da venda específica armazenada no banco</em>
 </p>
 
 # Compilação e execução
 
+<div align= "justify">
+É possível executar o projeto normalmente acessando, de preferência a pasta ["index.hml"]() a qual se encontra dentro da pasta "public". Porém caso queira executar o projeto através de um servidor basta seguir os passos à frente.
+</div>
+
+<div align= "justify">
+Digite o seguinte comando no terimal do projeto e em seguida para acessar os servidor criado utilize o mesmo URL mostrado na imagem.
+</div>
+
 <p align="center">
-<img src="git_imgs/compile1.png" width="900"/> 
+<img src="git_imgs/compile.png" width="900"/> 
 </p>
 <p align="center">
 <em>Imagem 7: Print da pagina de categorias de produtos</em>
