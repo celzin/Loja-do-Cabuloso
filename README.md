@@ -59,18 +59,39 @@ Em suma, espera-se que este projeto proporcione uma oportunidade de aprofundar o
 
 # Carrinho de Compras
 
-# Compilação e execução
-
 <p align="center">
-<img src="git_imgs/compile1.png" width="900"/> 
+<img src="git_imgs/payment.gif" width="900"/> 
 </p>
 <p align="center">
 <em>Imagem 4: Print da pagina de categorias de produtos</em>
 </p>
 
 <p align="center">
-<img src="git_imgs/compile2.png" width="900"/> 
+<img src="git_imgs/dashbboard1.png" width="900"/> 
 </p>
 <p align="center">
 <em>Imagem 5: Print da pagina de categorias de produtos</em>
+</p>
+
+<p align="center">
+<img src="git_imgs/dashbboard2.png" width="900"/> 
+</p>
+<p align="center">
+<em>Imagem 6: Print da pagina de categorias de produtos</em>
+</p>
+
+# Compilação e execução
+
+<p align="center">
+<img src="git_imgs/compile1.png" width="900"/> 
+</p>
+<p align="center">
+<em>Imagem 7: Print da pagina de categorias de produtos</em>
+</p>
+
+<p align="center">
+<img src="git_imgs/compile2.png" width="900"/> 
+</p>
+<p align="center">
+<em>Imagem 8: Print da pagina de categorias de produtos</em>
 </p>
