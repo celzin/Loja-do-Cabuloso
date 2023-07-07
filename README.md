@@ -117,12 +117,12 @@ Digite o seguinte comando no terimal do projeto e em seguida para acessar os ser
 <img src="git_imgs/compile.png" width="900"/> 
 </p>
 <p align="center">
-<em>Imagem 7: Print da pagina de categorias de produtos</em>
+<em>Imagem 7: Comando no terminal</em>
 </p>
 
 <p align="center">
 <img src="git_imgs/compile2.png" width="900"/> 
 </p>
 <p align="center">
-<em>Imagem 8: Print da pagina de categorias de produtos</em>
+<em>Imagem 8: Url para acessar servidor</em>
 </p>
