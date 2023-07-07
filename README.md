@@ -56,3 +56,7 @@ Em suma, espera-se que este projeto proporcione uma oportunidade de aprofundar o
 <p align="center">
 <em>Imagem 3: Print da pagina de categorias de produtos</em>
 </p>
+
+# Carrinho de Compras
+
+# Compilação e execução
