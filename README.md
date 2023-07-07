@@ -60,3 +60,17 @@ Em suma, espera-se que este projeto proporcione uma oportunidade de aprofundar o
 # Carrinho de Compras
 
 # Compilação e execução
+
+<p align="center">
+<img src="git_imgs/compile1.png" width="900"/> 
+</p>
+<p align="center">
+<em>Imagem 4: Print da pagina de categorias de produtos</em>
+</p>
+
+<p align="center">
+<img src="git_imgs/compile2.png" width="900"/> 
+</p>
+<p align="center">
+<em>Imagem 5: Print da pagina de categorias de produtos</em>
+</p>
