@@ -29,3 +29,27 @@ A seção de categoria <code>`(<section class="category-area">)`</code> apresent
 Essa é apenas uma visão geral geral do código HTML fornecido. Cada parte do código tem um papel específico na estruturação e apresentação da página da web para a loja "Loja do Cabuloso".
   
 </div>
+
+
+# Portfólio do Projeto
+
+<p align="center">
+<img src="git_imgs/home" width="350"/> 
+</p>
+<p align="center">
+<em>Imagem 1: Print da pagina inicial</em>
+</p>
+
+<p align="center">
+<img src="git_imgs/home2" width="350"/> 
+</p>
+<p align="center">
+<em>Imagem 2: Print da home na parte de produtos</em>
+</p>
+
+<p align="center">
+<img src="git_imgs/categorias" width="350"/> 
+</p>
+<p align="center">
+<em>Imagem 3: Print da pagina de categorias de produtos</em>
+</p>
