@@ -106,7 +106,7 @@ Após a conclusão de uma compra bem-sucedida, os detalhes do pedido são armaze
 # Compilação e execução
 
 <div align= "justify">
-É possível executar o projeto normalmente acessando, de preferência a pasta ["index.hml"]() a qual se encontra dentro da pasta "public". Porém caso queira executar o projeto através de um servidor basta seguir os passos à frente.
+É possível executar o projeto normalmente acessando, de preferência a pasta [index.html](https://github.com/celzin/Loja-do-Cabuloso/blob/main/public/index.html) a qual se encontra dentro da pasta "public". Porém caso queira executar o projeto através de um servidor basta seguir os passos à frente.
 </div>
 
 <div align= "justify">
