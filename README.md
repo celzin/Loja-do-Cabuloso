@@ -103,6 +103,47 @@ Após a conclusão de uma compra bem-sucedida, os detalhes do pedido são armaze
 <em>Imagem 6: Print da venda específica armazenada no banco</em>
 </p>
 
+# Autenticação do usuário
+
+<div align= "justify">
+
+A autenticação de usuário é uma parte essencial de muitos sistemas online, permitindo que os usuários acessem suas contas de forma segura e personalizada. Algumas das funcionalidades são:
+
+1. Registro de usuário: Os usuários podem se cadastrar fornecendo informações como nome, endereço de e-mail e senha. Esses detalhes são armazenados no banco de dados do sistema para futuras autenticações. Existe tratamento para um email válido, preencher todos os campos e também senha com pelo menos 6 caracteres. 
+
+2. Login: Os usuários podem fazer login usando suas credenciais registradas, fornecendo seu endereço de e-mail e senha. O sistema verifica essas informações no banco de dados e concede acesso ao usuário autenticado.
+
+</div>
+
+<p align="center">
+  
+  ![image](https://github.com/celzin/Loja-do-Cabuloso/assets/84406892/39c296d6-ad4f-4d9e-90a6-d2d8f5cac8f1)
+
+</p>
+<p align="center">
+<em>Imagem 7: Tela para registrar e fazer login do usuário</em>
+</p>
+
+<p align="center">
+
+![image](https://github.com/celzin/Loja-do-Cabuloso/assets/84406892/56b2231b-3adf-459e-bce9-08875f184192)
+
+  
+</p>
+<p align="center">
+<em>Imagem 8: Tela para cadastro de usuário</em>
+</p>
+
+<p align="center">
+  
+![image](https://github.com/celzin/Loja-do-Cabuloso/assets/84406892/cafeddaa-f1ad-4640-8206-8a5032a1331d)
+
+  
+</p>
+<p align="center">
+<em>Imagem 9: Tela com as informações de usuários cadastrados</em>
+</p>
+
 # Compilação e execução
 
 <div align= "justify">
