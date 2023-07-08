@@ -2,6 +2,11 @@
 <html lang="zxx" class="no-js">
 
 <head>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+	<script src="js/index.js"></script>
+
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
@@ -154,14 +159,13 @@
 				<div class="col-lg-6">
 					<div class="login_form_inner">
 						<h3>FAÇA SEU LOGIN</h3>
-						<form class="row login_form" action="contact_process.php" method="post" id="contactForm"
-							novalidate="novalidate">
+						<form class="row login_form" method="post" id="contactForm" novalidate="novalidate">
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Email"
+								<input type="text" class="form-control" id="emailid" name="name" placeholder="Email"
 									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Username'">
 							</div>
 							<div class="col-md-12 form-group">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Senha"
+								<input type="text" class="form-control" id="passwordid" name="name" placeholder="Senha"
 									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'">
 							</div>
 							<div class="col-md-12 form-group">
@@ -171,7 +175,10 @@
 								</div>
 							</div>
 							<div class="col-md-12 form-group">
-								<button type="submit" value="submit" class="primary-btn">Entrar</button>
+								<button type="submit" value="submit" class="primary-btn"
+									onclick="login()">Entrar</button>
+
+
 								<a href="#">Esqueceu sua Senha?</a>
 							</div>
 						</form>
